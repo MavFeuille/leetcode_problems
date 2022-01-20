@@ -1,7 +1,10 @@
 const twoSum = (nums, target) => {
   for (let i = 0; i < nums.length; i++) {
-    if (nums[i] + nums[i + 1] === target) {
-      console.log(nums.indexof(i+1, i))
+    for (let j = 0; j < nums.length; j++) {
+      if (nums[i] + nums[j] === target) {
+        console.log([i, j])
+        return [i, j];
+      }
     }
   }
 }
