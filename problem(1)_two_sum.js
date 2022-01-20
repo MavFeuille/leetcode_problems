@@ -8,6 +8,15 @@ const twoSum = (nums, target) => {
   //   }
   // }
 
+  let numObject = {};
+  
+  for (let i = 0; i < nums.length; i ++) {
+   let anotherNum = target - nums[i];
+   if (numObject[anotherNum] !== undefined) {
+     return [numObject[anotherNum], i];
+   }
+   numObject[nums[i]] = i;
+  }
 }
 
 console.log(twoSum([2,7,11,15]),9)
