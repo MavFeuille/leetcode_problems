@@ -8,6 +8,9 @@ const lengthOfLongestSubString = (s) => {
   let longestLength = 0;
 
   // Loop through the provided string
+  for (let i = 0; i < s.length; i ++) {
+    
+  }
   // Get the current character's position in newString
   // Check if current character exists in incoming string
   // Chop the array off after the occurrence of the character
