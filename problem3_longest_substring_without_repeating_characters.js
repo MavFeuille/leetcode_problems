@@ -4,18 +4,25 @@ const lengthOfLongestSubString = (s) => {
   // loop through the string
 
   // Initialize placeholders to store the running characters and longest length
-  let newString = [];
+  let arr = [];
   let longestLength = 0;
 
   // Loop through the provided string
   for (let i = 0; i < s.length; i ++) {
-    
+    // Get the current character's position in newString
+    const currentCharacterPosition = arr.indexOf(s[i]);
+
+    // Check if current character exists in incoming string
+    if (currentCharacterPosition !== -1) {
+      // Chop off the array after the occurrence of the character
+      arr.splice(0, currentCharacterPosition + 1);
+    }
+    // Add the current character to the newString
+    arr.push(s[i]);
+    // Store the current string length if bigger than the existing record
+    longestLength = Math.max(longestLength, arr.length);
   }
-  // Get the current character's position in newString
-  // Check if current character exists in incoming string
-  // Chop the array off after the occurrence of the character
-  // Add the current character to the newString
-  // Store the current string length if bigger than the existing record
+  return longestLength;
 }
 
 console.log(lengthOfLongestSubString("abcabcbb"));
