@@ -1,8 +1,5 @@
 const lengthOfLongestSubString = (s) => {
-  // a place holder for longest length
-  // a place holder to store the running characters
-  // loop through the string
-
+ 
   // Initialize placeholders to store the running characters and longest length
   let arr = [];
   let longestLength = 0;
