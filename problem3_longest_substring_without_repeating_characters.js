@@ -23,3 +23,5 @@ const lengthOfLongestSubString = (s) => {
 }
 
 console.log(lengthOfLongestSubString("abcabcbb"));
+console.log(lengthOfLongestSubString("bbbbb"));
+console.log(lengthOfLongestSubString("pwwkew"));
